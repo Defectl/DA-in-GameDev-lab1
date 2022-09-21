@@ -35,34 +35,58 @@
 - ✨Magic ✨
 
 ## Цель работы
-Ознакомиться с основными операторами зыка Python на примере реализации линейной регрессии.
+Ознакомиться с основными операторами языка Python на примере реализации линейной регрессии.
 
 ## Задание 1
-### Пошагово выполнить каждый пункт раздела "ход работы" с описанием и примерами реализации задач
+### Написать программы Hello, World на Python и Unity
 Ход работы:
-- Произвести подготовку данных для работы с алгоритмом линейной регрессии. 10 видов данных были установлены случайным образом, и данные находились в линейной зависимости. Данные преобразуются в формат массива, чтобы их можно было вычислить напрямую при использовании умножения и сложения.
+- Для Python в отчете привести скриншоты с демонстрацией сохранения документа google.colab на свой диск с запуском программы, выводящей сообщение Hello, World.
+
+Код на Python (файл с кодом лежит в папке Laboratory work 1 с назвзанием Work1);
 
 ```py
-
-In [ ]:
-#Import the required modules, numpy for calculation, and Matplotlib for drawing
-import numpy as np
-import matplotlib.pyplot as plt
-#This code is for jupyter Notebook only
-%matplotlib inline
-
-# define data, and change list to array
-x = [3,21,22,34,54,34,55,67,89,99]
-x = np.array(x)
-y = [2,22,24,65,79,82,55,130,150,199]
-y = np.array(y)
-
-#Show the effect of a scatter plot
-plt.scatter(x,y)
-
+print('Hello, World')
 ```
 
-- Определите связанные функции. Функция модели: определяет модель линейной регрессии wx+b. Функция потерь: функция потерь среднеквадратичной ошибки. Функция оптимизации: метод градиентного спуска для нахождения частных производных w и b.
+скриншот запуска программы в google.colab;
+
+![Снимок экрана 2022-09-20 151950](https://user-images.githubusercontent.com/101496751/191535837-03582682-ecdf-4a1d-8072-62dcd9e85cb0.png)
+
+скриншот сохранения документа google.colab на свой диск(ссылка на google drive https://drive.google.com/drive/folders/1ssdcaV8fwvZrdHcvlvRjshRf9WTsFhwD?usp=sharing);
+
+![Снимок экрана 2022-09-20 152324](https://user-images.githubusercontent.com/101496751/191536234-8a4fe9c7-745f-46e8-b06f-988bbdd7ff40.png)
+
+
+- Для Unity в отчете привести скриншоты вывода сообщения Hello, World в консоль.
+
+Код на Unity(файл с кодом лежит в папке Laboratory work 1 с назвзанием HelloWorld).
+
+```py
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class HelloWorld : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        print("Hello, World");       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
+```
+
+Для того, чтобы код заработал, нужно было привязать скрипт с данным код к какому-либо объекту и запустить сцену.
+
+Скриншот вывода сообщения Hello, World в консоль.
+
+![Снимок экрана 2022-09-20 155924](https://user-images.githubusercontent.com/101496751/191539701-e982d97e-292f-4e8a-8848-8e6d7d4717a1.png)
 
 
 ## Задание 2
