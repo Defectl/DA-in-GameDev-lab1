@@ -42,7 +42,7 @@
 Ход работы:
 - Для Python в отчете привести скриншоты с демонстрацией сохранения документа google.colab на свой диск с запуском программы, выводящей сообщение Hello, World.
 
-Код на Python (файл с кодом лежит в папке Laboratory work 1 с назвзанием Work1);
+Код на Python (файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/_Work1.ipynb));
 
 ```py
 print('Hello, World')
@@ -52,14 +52,14 @@ print('Hello, World')
 
 ![Снимок экрана 2022-09-20 151950](https://user-images.githubusercontent.com/101496751/191535837-03582682-ecdf-4a1d-8072-62dcd9e85cb0.png)
 
-скриншот сохранения документа google.colab на свой диск(ссылка на google drive https://drive.google.com/drive/folders/1ssdcaV8fwvZrdHcvlvRjshRf9WTsFhwD?usp=sharing);
+скриншот сохранения документа google.colab на [свой диск](https://drive.google.com/drive/folders/1ssdcaV8fwvZrdHcvlvRjshRf9WTsFhwD?usp=sharing);
 
 ![Снимок экрана 2022-09-20 152324](https://user-images.githubusercontent.com/101496751/191536234-8a4fe9c7-745f-46e8-b06f-988bbdd7ff40.png)
 
 
 - Для Unity в отчете привести скриншоты вывода сообщения Hello, World в консоль.
 
-Код на Unity(файл с кодом лежит в папке Laboratory work 1 с назвзанием HelloWorld).
+Код на Unity(файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [HelloWorld](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/HelloWorld.cs)).
 
 ```py
 using System.Collections;
