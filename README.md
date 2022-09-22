@@ -267,7 +267,7 @@ y = np.array(y)
 
 Можно сделать вывод, что при уменьшении исходных данных уменьшается величина потерь, то есть стремится к нулю.
 
-*Файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1.3.](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/Work1.2.ipynb)
+*Файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1.3.](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/Work1.3.ipynb)
 
 
 - Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ван ответ. В качестве эксперимента можете изменить значение параметра.
