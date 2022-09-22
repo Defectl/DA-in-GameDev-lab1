@@ -281,7 +281,7 @@ y = np.array(y)
 
 Можно сделать вывод, что параметр Lr отвечает за разницу значений после каждой итерации. Чем больше значение Lr, тем больше разница между значениями.
 
-*Файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1.3.2.](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/Work1.3.ipynb)
+*Файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1.3.2.](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/Work1.3.2.ipynb)
 
 
 
