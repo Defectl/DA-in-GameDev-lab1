@@ -270,7 +270,7 @@ y = np.array(y)
 *Файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1.3.](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/Work1.3.ipynb)
 
 
-- Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ван ответ. В качестве эксперимента можете изменить значение параметра.
+- Какова роль параметра Lr? Ответьте на вопрос, приведите пример выполнения кода, который подтверждает ваш ответ. В качестве эксперимента можете изменить значение параметра.
 
 Для эксперимента я увеличила значение Lr в 100 раз.
 Произошли такие изменения со значениями и графиком:
@@ -291,12 +291,10 @@ y = np.array(y)
 
 | Plugin | README |
 | ------ | ------ |
-| Dropbox | [plugins/dropbox/README.md][PlDb] |
 | GitHub | [plugins/github/README.md][PlGh] |
 | Google Drive | [plugins/googledrive/README.md][PlGd] |
-| OneDrive | [plugins/onedrive/README.md][PlOd] |
-| Medium | [plugins/medium/README.md][PlMe] |
-| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+| Google.colab | [plugins/googlecolab/README.md][PlGc] |
+| Unity | [plugins/unity/README.md][PlU] |
 
 ## Powered by
 
