@@ -134,9 +134,9 @@ def optimize(a, b, x, y):
   prediction = model(a, b, x)
   #Обновление значений a и b, поиском частных производных функций потерь на a и b
   da = (1.0 / num) * ((prediction - y) * x).sum()
-  bd = (1.0 / num) * ((prediction - y).sum())
+  db = (1.0 / num) * ((prediction - y).sum())
   a = a - Lr * da
-  b = b - Lr * bd
+  b = b - Lr * db
   return a, b
 ```
 
