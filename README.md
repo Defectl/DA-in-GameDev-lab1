@@ -241,7 +241,7 @@ plt.plot(x, prediction)
 
 Смотря на значения в консоли и графики по итерациям, можно проследить, что значения параметров a и b с каждой итерацией увеличиваются, а вот значения потерь, наоборот, уменьшаются.
 
-*Файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1.2.](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/HelloWorld.cs)).
+*Файл с кодом лежит в папке [Laboratory work 1](https://github.com/Defectl/DA-in-GameDev-lab1/tree/main/Laboratory%20work%201) с назвзанием [Work1.2.](https://github.com/Defectl/DA-in-GameDev-lab1/blob/main/Laboratory%20work%201/Work1.2.ipynb)
 
 
 
