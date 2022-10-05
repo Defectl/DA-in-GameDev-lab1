@@ -163,15 +163,109 @@ public class NewBehaviourScript : MonoBehaviour
 ![image](https://user-images.githubusercontent.com/101496751/194116305-a97ae3ec-1765-4c8f-ba92-2e4c5e2b10b8.png)
 ![image](https://user-images.githubusercontent.com/101496751/194116344-c5a0564e-19e4-4c45-a8ce-d06dcda8af79.png)
 
+Значит, связка Unity и Google Sheets удалась!
 
 
 - Написать функционал на Unity, в котором будет воспроизводиться аудио-файл в зависимости от значения данных из таблицы.
 
+Дополняем наш код, чтобы выводились все значение и звуковое сопровождение к ним, теперь он выглядит так:
+```py
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Networking;
+using SimpleJSON;
 
+public class NewBehaviourScript : MonoBehaviour
+{
+    public AudioClip goodSpeak;
+    public AudioClip normalSpeak;
+    public AudioClip badSpeak;
+    private AudioSource selectAudio;
+    private Dictionary<string,float> dataSet = new Dictionary<string, float>();
+    private bool statusStart = false;
+    private int i = 1;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+        StartCoroutine(GoogleSheets());
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (dataSet["Mon_" + i.ToString()] <= 10 & statusStart == false & i != dataSet.Count)
+        {
+            StartCoroutine(PlaySelectAudioGood());
+            Debug.Log(dataSet["Mon_" + i.ToString()]);
+        }
 
+        if (dataSet["Mon_" + i.ToString()] > 10 & dataSet["Mon_" + i.ToString()] < 100 & statusStart == false & i != dataSet.Count)
+        {
+            StartCoroutine(PlaySelectAudioNormal());
+            Debug.Log(dataSet["Mon_" + i.ToString()]);
+        }
 
+        if (dataSet["Mon_" + i.ToString()] >= 100 & statusStart == false & i != dataSet.Count)
+        {
+            StartCoroutine(PlaySelectAudioBad());
+            Debug.Log(dataSet["Mon_" + i.ToString()]);
+        }
+    }
+
+    IEnumerator GoogleSheets()
+    {
+        UnityWebRequest curentResp = UnityWebRequest.Get("https://sheets.googleapis.com/v4/spreadsheets/1hOqMnl84YIYtB1-lRRwTsukZGh4APB9I-rt9tJUAM38/values/Лист1?key=AIzaSyA689pwzro5fs8-nzfvRiLECjse-uKT_rU");
+        yield return curentResp.SendWebRequest();
+        string rawResp = curentResp.downloadHandler.text;
+        var rawJson = JSON.Parse(rawResp);
+        foreach (var itemRawJson in rawJson["values"])
+        {
+            var parseJson = JSON.Parse(itemRawJson.ToString());
+            var selectRow = parseJson[0].AsStringList;
+            dataSet.Add(("Mon_" + selectRow[0]), float.Parse(selectRow[2]));
+        }
+    }
+
+    IEnumerator PlaySelectAudioGood()
+    {
+        statusStart = true;
+        selectAudio = GetComponent<AudioSource>();
+        selectAudio.clip = goodSpeak;
+        selectAudio.Play();
+        yield return new WaitForSeconds(3);
+        statusStart = false;
+        i++;
+    }
+    IEnumerator PlaySelectAudioNormal()
+    {
+        statusStart = true;
+        selectAudio = GetComponent<AudioSource>();
+        selectAudio.clip = normalSpeak;
+        selectAudio.Play();
+        yield return new WaitForSeconds(3);
+        statusStart = false;
+        i++;
+    }
+    IEnumerator PlaySelectAudioBad()
+    {
+        statusStart = true;
+        selectAudio = GetComponent<AudioSource>();
+        selectAudio.clip = badSpeak;
+        selectAudio.Play();
+        yield return new WaitForSeconds(4);
+        statusStart = false;
+        i++;
+    }
+}
+```
+
+Переносим аудио-файлы в скрипт:
+![image](https://user-images.githubusercontent.com/101496751/194118007-01d21955-efe1-4811-ba19-cc508e649ce2.png)
+
+Теперь в консоли выводят вся данные из google-таблицы и звуковое сопровождение. Для значение больших ста: "Вы самый жестокий тиран в королестве, Ваша Светлость"; для значений в диапозоне от 10 до 100: "Люди доверяют Вам, милорд"; для значений меньше 10: "Люди восхищаются Вами, мой Лорд".
+![image](https://user-images.githubusercontent.com/101496751/194119255-d1208327-97dc-45b3-92e0-c54111a3889d.png)
 
 
 ## Задание 2
