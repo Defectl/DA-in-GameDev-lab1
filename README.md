@@ -43,28 +43,14 @@
 Ход работы:
 - В облачном сервисе google console подключить API для работы с google sheets и google drive.
 
-Первым делом нужно создать новый проект в сервисе Google Console, пусть он будет называться "UnityDataSciece":
-![Снимок экрана 2022-10-05 195203](https://user-images.githubusercontent.com/101496751/194093456-0708b7b4-ea73-46da-8a1d-55047cfc5c02.png)
+Сначала я создала новый проект в сервисе Google Console - "UnityDataSciece". Потом подключила необходимые API из маркетплейса, а именно Google Sheets API и Google Drive API. Создала сервис аккаунт UnityServiceDataScience и затем указала роль "Editor". После я выгрузила API-ключ. При создании сервиса появился Email, который необходимо занести в доступ в новую google-таблицу. Скриншот о проделанной работе:
 
-Дальше необходимо включить необходимые API из маркетплейса, а именно Google Sheets API и Google Drive API:
-![Снимок экрана 2022-10-05 195722](https://user-images.githubusercontent.com/101496751/194093927-14f54d03-6879-4381-9956-73b1a9638f81.png)
-![Снимок экрана 2022-10-05 195546](https://user-images.githubusercontent.com/101496751/194093954-0352040c-c377-446e-9739-106af76be181.png)
+![image](https://user-images.githubusercontent.com/101496751/194287680-254236b1-ed3f-4f4a-8c8c-30725df1e584.png)
+
 
 - Реализовать запись данных из скрипта на python в google-таблицу. Данные описывают изменение темпа инфляции на протяжении 11 отсчётных периодов, с учётом стоимости игрового объекта в каждый период.
 
-В ходе работы необходимо создать сервис аккаунт UnityServiceDataScience, затем указать роль "Editor":
-![image](https://user-images.githubusercontent.com/101496751/194094671-dead92b2-b055-49f0-81eb-372dd0441327.png)
-
-Затем необходимо добавить ключ сервису, указав путь до папки с нашим проектом:
-![image](https://user-images.githubusercontent.com/101496751/194095978-0f296a31-bd72-4b91-b196-9d46566fb836.png)
-
-При создании сервиса у нас появился Email, который необходимо занести в доступ в новую google-таблицу:
-![image](https://user-images.githubusercontent.com/101496751/194096915-6a49a4f6-460e-458a-8e15-78b103a2ca22.png)
-
-В новом проекте на PyCharm нужно открыть настройки и добавить в проект пакеты "gspread" и "numpy":
-![image](https://user-images.githubusercontent.com/101496751/194098591-7ee7c740-f98b-4742-808c-86113971a19e.png)
-![image](https://user-images.githubusercontent.com/101496751/194099196-525d36ea-2c45-4b03-9022-7948779acdee.png)
-
+В новом проекте на PyCharm нужно открыть настройки и добавить в проект пакеты "gspread" и "numpy".
 Далее нужно написать скрипт на Python:
 
 ```py
