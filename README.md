@@ -257,13 +257,169 @@ public class NewBehaviourScript : MonoBehaviour
 ## Задание 2
 ### Реализовать запись в Google-таблицу набора данных, полученных с помощью линейной регрессии из лабораторной работы №1.
 
-Для начала нужно создать лист в google-таблицах по аналогии из первого задания. Затем нужно переделать код линейной регрессии из лабораторной работы №1 также по аналогии с кодом из задания 1.
+Для начала нужно проделать всю ту же самую работу с Google Console:
+![image](https://user-images.githubusercontent.com/101496751/194292003-d0b104f4-49e1-4de8-bc83-812ea25b95e9.png)
+Создать лист в google-таблицах по аналогии из первого задания. Затем нужно переделать код линейной регрессии из лабораторной работы №1 также по аналогии с кодом из задания 1. В прошлой ЛР выяснилось, что чем больше паремтр Lr тем больше разница между потерями, этим мы и воспользуемся.
+Будем выгружать разницу между текущей и предыдущей величиной loss.
+Новый код представлен ниже:
 
+```py
+import numpy as np
+import gspread
 
+x = [3, 21, 22, 34, 54, 34, 55, 67, 89, 99]
+x = np.array(x)
+y = [2, 22, 24, 65, 79, 82, 55, 130, 150, 199]
+y = np.array(y)
 
+def model(a, b, x):
+  return a*x + b
+
+def loss_function(a, b, x, y):
+  num = len(x)
+  prediction = model(a, b, x)
+  return (0.5 / num) * (np.square(prediction - y)).sum()
+
+def optimize(a, b, x, y):
+  num = len(x)
+  prediction = model(a, b, x)
+  da = (1.0 / num) * ((prediction - y) * x).sum()
+  db = (1.0 / num) * ((prediction - y).sum())
+  a = a - Lr * da
+  b = b - Lr * db
+  return a, b
+
+def iterate(a, b, x, y, times):
+  for i in range(times):
+    a, b= optimize(a, b, x, y)
+  return a, b
+
+a = np.random.rand(1)
+b = np.random.rand(1)
+Lr = 0.0001
+
+gc = gspread.service_account(filename='regression-364710-2384e60c3dac.json')
+sh = gc.open("RegressionSheet")
+
+prev_loss = 0
+
+for i in range(10):
+    a, b = iterate(a, b, x, y, i + 1)
+
+    prediction = model(a, b, x)
+    temp_loss = loss_function(a, b, x, y)
+
+    diff_loss = abs(temp_loss - prev_loss)
+    prev_loss = temp_loss
+
+    sh.sheet1.update(('A' + str(i + 1)), str(i + 1))
+    sh.sheet1.update(('B' + str(i + 1)), str(temp_loss))
+    sh.sheet1.update(('C' + str(i + 1)), str(diff_loss))
+```
+Данные появились в google-таблице:
+![image](https://user-images.githubusercontent.com/101496751/194300336-fa7f1a7c-2ed4-4e9c-8e9e-f19786607896.png)
 
 ## Задание 3
 ### Самостоятельно разработать сценарий воспроизведения звукового сопровождения в Unity в зависимости от изменения считанных данных в задании 2.
+
+Сначала также нужно создать новый проект и подключить необходимые файлы. Затем нужно изменить данные воспроизведения аудио-файлов из 1 задания.
+Новый код с измененными границами для произведения айдио-файлов:
+
+```py
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Networking;
+using SimpleJSON;
+
+public class NewBehaviourScript : MonoBehaviour
+{
+    public AudioClip goodSpeak;
+    public AudioClip normalSpeak;
+    public AudioClip badSpeak;
+    private AudioSource selectAudio;
+    private Dictionary<string,float> dataSet = new Dictionary<string, float>();
+    private bool statusStart = false;
+    private int i = 1;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        StartCoroutine(GoogleSheets());
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (dataSet["Mon_" + i.ToString()] <= 2 & statusStart == false & i != dataSet.Count)
+        {
+            StartCoroutine(PlaySelectAudioGood());
+            Debug.Log(dataSet["Mon_" + i.ToString()]);
+        }
+
+        if (dataSet["Mon_" + i.ToString()] > 2 & dataSet["Mon_" + i.ToString()] < 300 & statusStart == false & i != dataSet.Count)
+        {
+            StartCoroutine(PlaySelectAudioNormal());
+            Debug.Log(dataSet["Mon_" + i.ToString()]);
+        }
+
+        if (dataSet["Mon_" + i.ToString()] >= 300 & statusStart == false & i != dataSet.Count)
+        {
+            StartCoroutine(PlaySelectAudioBad());
+            Debug.Log(dataSet["Mon_" + i.ToString()]);
+        }
+    }
+
+    IEnumerator GoogleSheets()
+    {
+        UnityWebRequest curentResp = UnityWebRequest.Get("https://sheets.googleapis.com/v4/spreadsheets/1lPJwP6lLr1_dAXH6hV6QgOX_BUsz2KZUSTDXSi-Mfbw/values/Лист1?key=AIzaSyD-bRuAcWrSgZeShsllpOnLy_WX2Tkzjys");
+        yield return curentResp.SendWebRequest();
+        string rawResp = curentResp.downloadHandler.text;
+        var rawJson = JSON.Parse(rawResp);
+        foreach (var itemRawJson in rawJson["values"])
+        {
+            var parseJson = JSON.Parse(itemRawJson.ToString());
+            var selectRow = parseJson[0].AsStringList;
+            dataSet.Add(("Mon_" + selectRow[0]), float.Parse(selectRow[2]));
+        }
+    }
+
+    IEnumerator PlaySelectAudioGood()
+    {
+        statusStart = true;
+        selectAudio = GetComponent<AudioSource>();
+        selectAudio.clip = goodSpeak;
+        selectAudio.Play();
+        yield return new WaitForSeconds(3);
+        statusStart = false;
+        i++;
+    }
+    IEnumerator PlaySelectAudioNormal()
+    {
+        statusStart = true;
+        selectAudio = GetComponent<AudioSource>();
+        selectAudio.clip = normalSpeak;
+        selectAudio.Play();
+        yield return new WaitForSeconds(3);
+        statusStart = false;
+        i++;
+    }
+    IEnumerator PlaySelectAudioBad()
+    {
+        statusStart = true;
+        selectAudio = GetComponent<AudioSource>();
+        selectAudio.clip = badSpeak;
+        selectAudio.Play();
+        yield return new WaitForSeconds(4);
+        statusStart = false;
+        i++;
+    }
+}
+```
+
+Вывод в консоли:
+![image](https://user-images.githubusercontent.com/101496751/194300819-79018e1f-6e47-4d9f-a038-d7e6340c97ab.png)
+
 
 ## Выводы
 
