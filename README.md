@@ -117,6 +117,9 @@ public class RollerAgent : Agent
     }
 }
 ```
+- Объекту RollerAgent нужно добавить компоненты Rigidbody, Decision Requester, Behavior Parameters с такими настройками:
+![image](https://user-images.githubusercontent.com/101496751/196690522-1dbaea53-ddeb-4348-b8b0-6791e7ed3310.png)
+![image](https://user-images.githubusercontent.com/101496751/196690558-79957dfe-f758-4558-8984-9ad44a75df45.png)
 
 
 ## Задание 2
