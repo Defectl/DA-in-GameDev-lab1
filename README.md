@@ -133,10 +133,14 @@ public class RollerAgent : Agent
 
 ![Untitled](https://user-images.githubusercontent.com/101496751/196725774-30aa975a-27b5-4eab-86b0-5705cce9d502.gif)
 
-
 - Симуляция сцены с тремя моделями:
 
+![Untitled (2)](https://user-images.githubusercontent.com/101496751/196727144-62308cfa-5dfb-4c2e-879f-2ca4978ec37f.gif)
+
+
 - Симуляция сцены с девятью моделями:
+
+![Untitled (5)](https://user-images.githubusercontent.com/101496751/196728351-27ac38fd-4ff7-4551-8b29-84d3355534ad.gif)
 
 - Симуляция сцены с двадцатьюсемью моделями:
 
