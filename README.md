@@ -50,12 +50,17 @@
 - С помощью Anaconda Promt нужно активировать новый ML-агент и скачать новые библиотеки: mlagents 0.28.0, torch 1.7.1
 
 ![image](https://user-images.githubusercontent.com/101496751/196694228-d5a4402b-d682-4572-8a0e-193ae6cd4e0d.png)
-![image](https://user-images.githubusercontent.com/101496751/196694515-edab1e23-6647-402f-aba8-77ee4d5aedd6.png)
+![image](https://user-images.githubusercontent.com/101496751/196716369-05f9c958-3100-42cf-954b-11eb0de8ff09.png)
 ![image](https://user-images.githubusercontent.com/101496751/196697767-87c98ae1-1b13-4895-b160-c111b900a834.png)
 
 - Далее нужно создать TargetArea, в которой находится плоскость, шар и куб. Также нужно создать C# скрипт-файл, добавить в него код, опубликованный в материалах для работы, и привязать его к сфере:
 
 ![image](https://user-images.githubusercontent.com/101496751/196687103-29c67ad6-5e78-4ce0-88b1-6567f3582a2c.png)
+
+- Нужно запустить работу ML-агента.
+
+![image](https://user-images.githubusercontent.com/101496751/196716130-0e3e659f-b09f-4a37-85e6-e6b58f94ce08.png)
+
 
 - Нужно вернуться в Unity и проверить работу ML-агента. При запуске программы в консоли выводится такой код:
 
