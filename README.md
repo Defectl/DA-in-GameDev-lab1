@@ -131,7 +131,8 @@ public class RollerAgent : Agent
 
 И у шара появилось такое  поведение:
 
-ВСТАВИТЬ ВИДЕО
+![Untitled](https://user-images.githubusercontent.com/101496751/196725774-30aa975a-27b5-4eab-86b0-5705cce9d502.gif)
+
 
 - Симуляция сцены с тремя моделями:
 
