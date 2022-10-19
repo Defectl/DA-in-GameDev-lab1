@@ -144,9 +144,14 @@ public class RollerAgent : Agent
 
 - Симуляция сцены с двадцатьюсемью моделями:
 
+![Untitled (7)](https://user-images.githubusercontent.com/101496751/196729165-5896f48b-c396-4975-98bf-dfc7b84bc6bf.gif)
+
 - Работа модели после завершения обучения (для этого надо перенести файл RollerBall.onnx из результатов в assets, а потом перенести его в данное поле):
 
 ![image](https://user-images.githubusercontent.com/101496751/196722873-0ebd3c2b-122e-4051-8086-7f10cc862f6b.png)
+
+![Untitled (9)](https://user-images.githubusercontent.com/101496751/196729484-54b8c036-8b2d-4d6d-926c-2c8ed3a954cb.gif)
+
 
 
 
