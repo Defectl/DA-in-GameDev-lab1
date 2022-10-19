@@ -121,6 +121,11 @@ public class RollerAgent : Agent
 ![image](https://user-images.githubusercontent.com/101496751/196690522-1dbaea53-ddeb-4348-b8b0-6791e7ed3310.png)
 ![image](https://user-images.githubusercontent.com/101496751/196690558-79957dfe-f758-4558-8984-9ad44a75df45.png)
 
+- После добавления файла конфигурации нейронной сети в корень проекта, нужно запустить работу ml-агента:
+
+![image](https://user-images.githubusercontent.com/101496751/196692234-ec7ab5c6-a808-4364-9ceb-c155daed4534.png)
+
+
 
 ## Задание 2
 ### Подробно опишите каждую строку файла конфигурации нейронной сети, доступного в папке с файлами проекта по ссылке. Самостоятельно найдите информацию о компонентах Decision Requester, Behavior Parameters, добавленных на сфере.
