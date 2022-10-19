@@ -40,6 +40,18 @@
 ## Задание 1
 ### Реализовать систему машинного обучения в связке Python - Google-Sheets – Unity. При выполнении задания можно использовать видео-материалы и исходные данные, предоставленные преподавателями курса.
 
+Ход работы
+
+-В созданный проект добавьте ML Agent, выбрав Window - Package Manager - Add Package from disk. Последовательно добавьте .json – файлы:
+![image](https://user-images.githubusercontent.com/101496751/196680373-ca879ba2-994c-4612-b547-07a7e8cf4be5.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/101496751/196679872-5dcfc974-04d8-41e0-9965-abf9a25165d3.png)
+![image](https://user-images.githubusercontent.com/101496751/196679938-ba6e424a-9348-4a05-99db-7fcb49957956.png)
+![image](https://user-images.githubusercontent.com/101496751/196680017-4a7f08bc-64c5-415a-9686-55070f189a9d.png)
+
 
 ```py
 
