@@ -123,7 +123,7 @@ public class RollerAgent : Agent
 
 - После добавления файла конфигурации нейронной сети в корень проекта, нужно запустить работу ml-агента:
 
-![image](https://user-images.githubusercontent.com/101496751/196692234-ec7ab5c6-a808-4364-9ceb-c155daed4534.png)
+![image](https://user-images.githubusercontent.com/101496751/196699170-a874369b-ebf9-4307-8ea4-3ce1e7e49283.png)
 
 
 
