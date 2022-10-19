@@ -49,9 +49,9 @@
 
 - С помощью Anaconda Promt нужно активировать новый ML-агент и скачать новые библиотеки: mlagents 0.28.0, torch 1.7.1
 
-![image](https://user-images.githubusercontent.com/101496751/196679872-5dcfc974-04d8-41e0-9965-abf9a25165d3.png)
-![image](https://user-images.githubusercontent.com/101496751/196679938-ba6e424a-9348-4a05-99db-7fcb49957956.png)
-![image](https://user-images.githubusercontent.com/101496751/196680017-4a7f08bc-64c5-415a-9686-55070f189a9d.png)
+![image](https://user-images.githubusercontent.com/101496751/196694228-d5a4402b-d682-4572-8a0e-193ae6cd4e0d.png)
+![image](https://user-images.githubusercontent.com/101496751/196694515-edab1e23-6647-402f-aba8-77ee4d5aedd6.png)
+![image](https://user-images.githubusercontent.com/101496751/196697767-87c98ae1-1b13-4895-b160-c111b900a834.png)
 
 - Далее нужно создать TargetArea, в которой находится плоскость, шар и куб. Также нужно создать C# скрипт-файл, добавить в него код, опубликованный в материалах для работы, и привязать его к сфере:
 
