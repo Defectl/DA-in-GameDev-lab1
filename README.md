@@ -240,7 +240,7 @@ behaviors:
 Имя объекта    
     
 ### network_settings:
-    Имя объекта    
+Имя объекта    
     
 ### normalize: false
 Имя объекта   
