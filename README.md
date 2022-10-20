@@ -165,8 +165,7 @@ public class RollerAgent : Agent
 
 ![image](https://user-images.githubusercontent.com/101496751/196722873-0ebd3c2b-122e-4051-8086-7f10cc862f6b.png)
 
-![Untitled (1)](https://user-images.githubusercontent.com/101496751/196929465-47cba03e-987e-4b9c-acad-62ab6cb3bbf6.gif)
-
+![Untitled (2)](https://user-images.githubusercontent.com/101496751/196930388-58b0a52e-8685-42e8-ba27-57c2dfc71bf2.gif)
 
 Выводы: При увелечении количества агентов в Unity (копий модели), модель быстрее обучается, то есть достигает более высоких показателей точности за меньше времени итераций.
 
