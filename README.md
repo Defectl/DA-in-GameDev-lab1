@@ -203,74 +203,74 @@ behaviors:
     summary_freq: 10000
 ```
 
-- behaviors
+### behaviors
 Описание поведения объекта
     
-- RollerBall
-    Имя объекта
+### RollerBall
+Имя объекта
     
-- trainer_type: ppo
-    Тип обучения с поощрением
+### trainer_type: ppo
+Тип обучения с поощрением
     
-- hyperparameters
-    Гиперпараметры   
+### hyperparameters
+Гиперпараметры   
     
- - batch_size: 10
-    Имя объекта   
+### batch_size: 10
+Имя объекта   
     
- - buffer_size: 100
-    Имя объекта
+### buffer_size: 100
+Имя объекта
     
- - learning_rate: 3.0e-4
-    Имя объекта   
+### learning_rate: 3.0e-4
+Имя объекта   
     
- - beta: 5.0e-4
-    Имя объекта   
+### beta: 5.0e-4
+Имя объекта   
     
-- epsilon: 0.2
+### epsilon: 0.2
+Имя объекта    
+    
+### lambd: 0.99
+Имя объекта    
+    
+### num_epoch: 3
+Имя объекта    
+    
+### learning_rate_schedule: linear
+Имя объекта    
+    
+### network_settings:
     Имя объекта    
     
-- lambd: 0.99
-    Имя объекта    
+### normalize: false
+Имя объекта   
     
-- num_epoch: 3
-    Имя объекта    
+### hidden_units: 128
+Имя объекта
     
-- learning_rate_schedule: linear
-    Имя объекта    
+### num_layers: 2
+Имя объекта    
     
-- network_settings:
-    Имя объекта    
+### reward_signals:
+Имя объекта    
     
-- normalize: false
-   Имя объекта   
+### extrinsic:
+Имя объекта    
     
-- hidden_units: 128
-    Имя объекта
+### gamma: 0.99
+Имя объекта    
     
-- num_layers: 2
-    Имя объекта    
+### strength: 1.0
+Имя объекта    
     
-- reward_signals:
-    Имя объекта    
-    
-- extrinsic:
-    Имя объекта    
-    
-- gamma: 0.99
-    Имя объекта    
-    
-- strength: 1.0
-    Имя объекта    
-    
-- max_steps: 500000
-    Имя объекта    
+### max_steps: 500000
+Имя объекта    
         
-- time_horizon: 64
-    Имя объекта    
+### time_horizon: 64
+Имя объекта    
     
-- summary_freq: 10000
-    Имя объекта        
+### summary_freq: 10000
+Имя объекта        
     
     
 ## Задание 3
