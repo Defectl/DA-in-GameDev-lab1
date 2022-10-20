@@ -175,7 +175,104 @@ public class RollerAgent : Agent
 ## Задание 2
 ### Подробно опишите каждую строку файла конфигурации нейронной сети, доступного в папке с файлами проекта по ссылке. Самостоятельно найдите информацию о компонентах Decision Requester, Behavior Parameters, добавленных на сфере.
 
+Код из файла конфигурации нейронной сети:
 
+```py
+behaviors:
+  RollerBall:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 10
+      buffer_size: 100
+      learning_rate: 3.0e-4
+      beta: 5.0e-4
+      epsilon: 0.2
+      lambd: 0.99
+      num_epoch: 3
+      learning_rate_schedule: linear
+    network_settings:
+      normalize: false
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    max_steps: 500000
+    time_horizon: 64
+    summary_freq: 10000
+```
+
+- behaviors
+    Описание поведения объекта
+    
+- RollerBall
+    Имя объекта
+    
+- trainer_type: ppo
+    Тип обучения с поощрением
+    
+- hyperparameters
+    Гиперпараметры   
+    
+ - batch_size: 10
+    Имя объекта   
+    
+ - buffer_size: 100
+    Имя объекта
+    
+ - learning_rate: 3.0e-4
+    Имя объекта   
+    
+ - beta: 5.0e-4
+    Имя объекта   
+    
+- epsilon: 0.2
+    Имя объекта    
+    
+- lambd: 0.99
+    Имя объекта    
+    
+- num_epoch: 3
+    Имя объекта    
+    
+- learning_rate_schedule: linear
+    Имя объекта    
+    
+- network_settings:
+    Имя объекта    
+    
+- normalize: false
+   Имя объекта   
+    
+- hidden_units: 128
+    Имя объекта
+    
+- num_layers: 2
+    Имя объекта    
+    
+- reward_signals:
+    Имя объекта    
+    
+- extrinsic:
+    Имя объекта    
+    
+- gamma: 0.99
+    Имя объекта    
+    
+- strength: 1.0
+    Имя объекта    
+    
+- max_steps: 500000
+    Имя объекта    
+        
+- time_horizon: 64
+    Имя объекта    
+    
+- summary_freq: 10000
+    Имя объекта        
+    
+    
 ## Задание 3
 ### Доработайте сцену и обучите ML-Agent таким образом, чтобы шар перемещался между двумя кубами разного цвета. Кубы должны, как и в первом задании, случайно изменять координаты на плоскости.
 
