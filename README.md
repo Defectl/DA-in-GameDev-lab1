@@ -152,7 +152,6 @@ public class RollerAgent : Agent
 
 ![Untitled (2)](https://user-images.githubusercontent.com/101496751/196727144-62308cfa-5dfb-4c2e-879f-2ca4978ec37f.gif)
 
-
 - Симуляция сцены с 9-ю моделями:
 
 ![Untitled (5)](https://user-images.githubusercontent.com/101496751/196728351-27ac38fd-4ff7-4551-8b29-84d3355534ad.gif)
@@ -286,6 +285,87 @@ DecisionPeriod - период принятия решений.
 - Сначала создадим предыдущую модель, в которой находится шар, плоскость и уже два куба:
 
 ![image](https://user-images.githubusercontent.com/101496751/196980583-bb3095b6-50b2-46f1-8695-24886ed89d30.png)
+
+- Далее нужно написать такой скрипт:
+
+```py
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Unity.MLAgents;
+using Unity.MLAgents.Sensors;
+using Unity.MLAgents.Actuators;
+
+public class RollerAgent : Agent
+{
+    Rigidbody rBody;
+    void Start()
+    {
+        rBody = GetComponent<Rigidbody>();
+    }
+    public GameObject FirstTarget;
+    public GameObject SecondTarget;
+    private bool firstTargetCollected;
+    private bool secondTargetCollected;
+    public override void OnEpisodeBegin()
+    {
+        if (this.transform.localPosition.y < 0)
+        {
+            this.rBody.angularVelocity = Vector3.zero;
+            this.rBody.velocity = Vector3.zero;
+            this.transform.localPosition = new Vector3(0, 0.5f, 0);
+        }
+        FirstTarget.transform.localPosition = new Vector3(Random.value * 8-4, 0.5f, Random.value * 8-4);
+        SecondTarget.transform.localPosition = new Vector3(Random.value * 8-4, 0.5f, Random.value * 8-4);
+        FirstTarget.SetActive(true);
+        SecondTarget.SetActive(true);
+        firstTargetCollected = false;
+        secondTargetCollected = false;
+    }
+    public override void CollectObservations(VectorSensor sensor)
+    {
+        sensor.AddObservation(FirstTarget.transform.localPosition);
+        sensor.AddObservation(SecondTarget.transform.localPosition);
+        sensor.AddObservation(this.transform.localPosition);
+        sensor.AddObservation(firstTargetCollected);
+        sensor.AddObservation(secondTargetCollected);
+        sensor.AddObservation(rBody.velocity.x);
+        sensor.AddObservation(rBody.velocity.z);
+    }
+    public float forceMultiplier = 10;
+    public override void OnActionReceived(ActionBuffers actionBuffers)
+    {
+        Vector3 controlSignal = Vector3.zero;
+        controlSignal.x = actionBuffers.ContinuousActions[0];
+        controlSignal.z = actionBuffers.ContinuousActions[1];
+        rBody.AddForce(controlSignal * forceMultiplier);
+        float distanceToFirstTarget = Vector3.Distance(this.transform.localPosition, FirstTarget.transform.localPosition);
+        float distanceToSecondTarget = Vector3.Distance(this.transform.localPosition, SecondTarget.transform.localPosition);
+        if (!firstTargetCollected & distanceToFirstTarget < 1.42f)
+        {
+            firstTargetCollected = true;
+            FirstTarget.SetActive(false);
+        }
+        if (!secondTargetCollected & distanceToSecondTarget < 1.42f)
+        {
+            secondTargetCollected = true;
+            SecondTarget.SetActive(false);
+        }
+        if(firstTargetCollected & secondTargetCollected)
+        {
+            SetReward(1.0f);
+                EndEpisode();
+        }
+        else if (this.transform.localPosition.y < 0)
+        {
+            EndEpisode();
+        }
+    }
+}
+```
+
+- Настройки шара такие же, как в первом задании.
+- После обучения модели в несколько этапов (3 модели, 9, 27) модель работает вот так:
 
 
 
