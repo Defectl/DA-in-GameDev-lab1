@@ -354,7 +354,7 @@ public class RollerAgent : Agent
         if(firstTargetCollected & secondTargetCollected)
         {
             SetReward(1.0f);
-                EndEpisode();
+            EndEpisode();
         }
         else if (this.transform.localPosition.y < 0)
         {
@@ -365,21 +365,21 @@ public class RollerAgent : Agent
 ```
 
 - Настройки шара такие же, как в первом задании.
-- После обучения модели в несколько этапов (3 модели, 9, 27) модель работает вот так:
+- После обучения модели в несколько этапов (3 модели, 9, 27), модель работает вот так:
 
-
+![Untitled (3)](https://user-images.githubusercontent.com/101496751/197012412-9be323b0-c9a8-42bc-ad39-407f0f3f1867.gif)
 
 ## Выводы
 
+- В ходе лабораторной работы познакомилась с программными средствами для создания системы машинного обучения и ее интеграции в Unity. В ходе работы также выяснила, что при увеличении количество копий модели - она обучается быстрее. 
+- Игровой баланс — это равновесие между персонажами, командами, тактиками игры и т.п. Баланс должен быть во времени игры, в её сложности, сюжета (он должен быть разнообразным, но в меру). И системы машинного обучения могут помогать поддерживать баланс игры. Например, усложнять миссии, если персонаж имеет высокие характеристики. Или подстраивать характеристики мира, чтобы персонажу было интересно развиваться. То есть машинное обучение позволяет более точно распределять игровые механики, которые подлежат балансу.
 
 | Plugin | README |
 | ------ | ------ |
 | GitHub | [plugins/github/README.md][PlGh] |
-| Google Drive | [plugins/googledrive/README.md][PlGd] |
-| Google.colab | [plugins/googlecolab/README.md][PlGc] |
-| Google Sheets | [plugins/googlesheets/README.md][PlGS] |
-| Google Console | [plugins/googleconsole/README.md][PlGC] |
 | PyCharm | [plugins/pycharm/README.md][PlPC] |
+| Unity | [plugins/unity/README.md][PlU] |
+| Anaconda Prompt| [plugins/anacondaprompt/README.md][PlAP] |
 
 ## Powered by
 
