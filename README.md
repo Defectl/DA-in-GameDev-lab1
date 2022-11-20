@@ -183,11 +183,13 @@ public class Perceptron : MonoBehaviour {
 
 Сначала вспомним табличку для этой логической операции:
 
- 0 AND 0 = 0
- 0 AND 1 = 0
- 1 AND 0 = 0
- 1 AND 1 = 1
- 
+| A | B | A AND B |
+| ------ | ------ | ------|
+| 0 | 0 | 0 |
+| 0 | 1 | 0 |
+| 1 | 0 | 0 |
+| 1 | 1 | 1 |
+
 Установим эти значения для нашего скрипта: 
 ![image](https://user-images.githubusercontent.com/101496751/202899673-9f496710-2521-453f-a4a8-41d48da6dd56.png)
 
@@ -212,11 +214,13 @@ public class Perceptron : MonoBehaviour {
 
 Сначала вспомним табличку для этой логической операции:
 
- 0 NAND 0 = 1
- 0 NAND 1 = 1
- 1 NAND 0 = 1
- 1 NAND 1 = 0
- 
+| A | B | A NAND B |
+| ------ | ------ | ------|
+| 0 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 0 |
+
 Установим эти значения для нашего скрипта: 
 ![image](https://user-images.githubusercontent.com/101496751/202900045-85ad8ffd-9be6-4182-b72b-d72671608d86.png)
 
