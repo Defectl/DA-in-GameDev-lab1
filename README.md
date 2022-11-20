@@ -150,13 +150,15 @@ public class Perceptron : MonoBehaviour {
 
 Сначала вспомним табличку для этой логической операции:
 
- 0 OR 0 = 0
- 0 OR 1 = 1
- 1 OR 0 = 1
- 1 OR 1 = 1
- 
- Установим эти значения для нашего скрипта: 
- ![image](https://user-images.githubusercontent.com/101496751/202898962-35b4e486-855f-4315-94dc-d58c16309a64.png)
+| A | B | A OR B |
+| ------ | ------ | ------|
+| 0 | 0 | 0 |
+| 0 | 1 | 1 |
+| 1 | 0 | 1 |
+| 1 | 1 | 1 |
+
+Установим эти значения для нашего скрипта: 
+![image](https://user-images.githubusercontent.com/101496751/202898962-35b4e486-855f-4315-94dc-d58c16309a64.png)
 
 Для начала зададим 1 обучающую эпоху и посмотрим на результаты наших тестов:
 ![image](https://user-images.githubusercontent.com/101496751/202899006-bb0db6c8-f5c4-4495-b1ca-095e6359c585.png)
