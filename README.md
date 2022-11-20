@@ -147,6 +147,7 @@ public class Perceptron : MonoBehaviour {
 ```
 
 - Реализация операции OR | ИЛИ:
+
 Сначала вспомним табличку для этой логической операции:
 
  0 OR 0 = 0
@@ -172,9 +173,73 @@ public class Perceptron : MonoBehaviour {
 ![image](https://user-images.githubusercontent.com/101496751/202899257-ddd5467f-adb1-4de5-a756-90f0148d0547.png)
 ![image](https://user-images.githubusercontent.com/101496751/202899264-06e003bd-3904-4ff2-addb-7fee37ae76b9.png)
 
-Можем сделать вывод, что не всегда 4 эпохи обучения достаточно, бывает, что и при 4 итерации Total Error отлично от нуля и программ работает некорректно. 
+Можем сделать вывод, что не всегда 4 эпохи обучения достаточно, бывает, что и при 4 итерации Total Error отлично от нуля и программа работает некорректно. 
 
-В ходе подбора количества эпох обучения, в моем случае на пятой эпохе значение Total Error равно нулю. (Подробные значения на каждой эпохе буду разбирать во втором задании с графиками.)
+В ходе подбора количества эпох обучения, в моем случае, на пятой эпохе значение Total Error равно нулю. (Подробные значения на каждой эпохе буду разбирать во втором задании с графиками.)
+
+- Реализация операции AND | И:
+
+Сначала вспомним табличку для этой логической операции:
+
+ 0 AND 0 = 0
+ 0 AND 1 = 0
+ 1 AND 0 = 0
+ 1 AND 1 = 1
+ 
+Установим эти значения для нашего скрипта: 
+![image](https://user-images.githubusercontent.com/101496751/202899673-9f496710-2521-453f-a4a8-41d48da6dd56.png)
+
+Для начала зададим 1 обучающую эпоху и посмотрим на результаты наших тестов:
+![image](https://user-images.githubusercontent.com/101496751/202899661-0f59f0ef-3e5d-4542-81af-d67ca08d8d5a.png)
+
+Как и требовалось ожидать 1 эпохи обучения недостаточно для корректных ответов.
+
+Зададим 4 эпохи:
+![image](https://user-images.githubusercontent.com/101496751/202899725-5dbda102-15c8-46c4-bb51-b6783f4306ff.png)
+![image](https://user-images.githubusercontent.com/101496751/202899737-bb9c7c1b-6466-450a-9d3e-8ad035fd8b37.png)
+![image](https://user-images.githubusercontent.com/101496751/202899746-38dcc15c-5811-4907-9cdc-f57a86fa77f2.png)
+
+При данной операции и 4 эпох для обучения недостаточно. Попробуем снова:
+![image](https://user-images.githubusercontent.com/101496751/202899810-5d88b161-153a-474c-a542-8305ac09ce04.png)
+![image](https://user-images.githubusercontent.com/101496751/202899819-2f8862f2-073a-4771-b815-7e177474d292.png)
+![image](https://user-images.githubusercontent.com/101496751/202899821-1b281242-4844-4697-add0-7d9e82005c3c.png)
+
+В этот раз 4 эпохи обучении было достаточно. О подробных значениях при каждой эпохе во втором задании.
+
+- Реализация операции NAND | инвертированный элемент И:
+
+Сначала вспомним табличку для этой логической операции:
+
+ 0 NAND 0 = 1
+ 0 NAND 1 = 1
+ 1 NAND 0 = 1
+ 1 NAND 1 = 0
+ 
+Установим эти значения для нашего скрипта: 
+![image](https://user-images.githubusercontent.com/101496751/202900045-85ad8ffd-9be6-4182-b72b-d72671608d86.png)
+
+Для начала зададим 1 обучающую эпоху и посмотрим на результаты наших тестов:
+![image](https://user-images.githubusercontent.com/101496751/202900104-feac3b47-3990-4f42-aef3-f83efab174e9.png)
+
+Одной эпохи для обучения мало. Мы это подтвердили уже на трех логических операциях.
+
+Установим 4 эпохи обучения:
+![image](https://user-images.githubusercontent.com/101496751/202900143-874cef09-398f-4e03-b367-d508ce0fc8b1.png)
+![image](https://user-images.githubusercontent.com/101496751/202900148-a6ccb95c-c677-4566-af58-2413b7474f95.png)
+![image](https://user-images.githubusercontent.com/101496751/202900155-59b6f8c4-2402-46fe-8ad4-3f9e781103c5.png)
+
+Четырех эпох обучения мало, было проверено на нескольких запусках. Установим значение 8:
+![image](https://user-images.githubusercontent.com/101496751/202900203-f39b8c72-124b-4b20-9c76-abe6c508fe23.png)
+![image](https://user-images.githubusercontent.com/101496751/202900213-aa09988c-1bbe-48a3-b238-b1e660421ec7.png)
+![image](https://user-images.githubusercontent.com/101496751/202900221-abb68fcb-1abb-4fd5-98bf-4939b6166257.png)
+![image](https://user-images.githubusercontent.com/101496751/202900228-62e2c057-5878-4619-b724-35b560f4134e.png)
+![image](https://user-images.githubusercontent.com/101496751/202900248-543e9900-53d7-4310-b7ed-734562ea626b.png)
+
+В данной попытке уже при шестой эпохе значение Total Error было равно нулю. пожробные значения во втором задании.
+
+
+
+
 
 
 
