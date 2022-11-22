@@ -570,7 +570,8 @@ public class Perceptron : MonoBehaviour {
 
 - Операция XOR | исключающее ИЛИ (Для операции XOR заменим значения кубов на результаты промежуточных результатов):
 
-![Untitled (4)](https://user-images.githubusercontent.com/101496751/203352437-9981936f-e65e-4eef-ac7f-3b40d27cd939.gif)
+![Untitled (4) (online-video-cutter com)](https://user-images.githubusercontent.com/101496751/203353657-e87bb2c3-1f09-4207-a1d6-b37911986001.gif)
+
 
 
 
