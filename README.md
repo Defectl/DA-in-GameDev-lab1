@@ -524,8 +524,17 @@ public class Perceptron : MonoBehaviour {
 	}
 
 	void Start () {
-		// Train(8, tsNAND);
 		// Train(8, tsOR);
+		// double tsOr0 = CalcOutput(0,0); //0
+		// double tsOr1 = CalcOutput(0,1); //1
+		// double tsOr2 = CalcOutput(1,0); //1
+		// double tsOr3 = CalcOutput(1,1); //1
+		
+		// Train(8, tsNAND);
+		// double tsNAND0 = CalcOutput(0,0); //1
+		// double tsNAND1 = CalcOutput(0,1); //1
+		// double tsNAND2 = CalcOutput(1,0); //1
+		// double tsNAND3 = CalcOutput(1,1); //0
 		Train(8, ts);
 
 		
@@ -547,7 +556,22 @@ public class Perceptron : MonoBehaviour {
 }
 ```
 
-- Операция OR | ИЛИ: 
+- Операция OR | ИЛИ:
+
+![или](https://user-images.githubusercontent.com/101496751/203351251-3ba686f5-2af7-4c51-87df-d033bca84dc8.gif)
+
+- Операция AND | И: 
+
+![и](https://user-images.githubusercontent.com/101496751/203351408-9844174f-4b46-4eed-9e82-bceece979c1a.gif)
+
+- Операция NAND | инвертированный элемент И: 
+
+![неи](https://user-images.githubusercontent.com/101496751/203352284-a6a0dca2-5262-4dd0-a6ae-8f9db7e05455.gif)
+
+- Операция XOR | исключающее ИЛИ (Для операции XOR заменим значения кубов на результаты промежуточных результатов):
+
+![Untitled (4)](https://user-images.githubusercontent.com/101496751/203352437-9981936f-e65e-4eef-ac7f-3b40d27cd939.gif)
+
 
 
 ## Выводы
