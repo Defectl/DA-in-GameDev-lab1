@@ -262,21 +262,28 @@ amountGold = Mathf.Clamp(actionBuffers.ContinuousActions[2], 1f, 15f);
 ![image](https://user-images.githubusercontent.com/101496751/204252863-1ebc0c2a-79e7-4c2e-9deb-e40161d8238e.png)
 ![image](https://user-images.githubusercontent.com/101496751/204253020-f5c8db39-6389-438a-af1f-2d0a2e3c3316.png)
 
-- второй запуск 
+- второй запуск 1
 strength: 2.0
 ![image](https://user-images.githubusercontent.com/101496751/204290208-e0dc8b3d-20f6-4e1c-b43e-ff49d4586846.png)
-![image](https://user-images.githubusercontent.com/101496751/204290544-a087d80c-620b-425b-9ac8-c2d44da40d39.png)
+![image](https://user-images.githubusercontent.com/101496751/204301788-03ea388f-bd32-41f3-937d-5a7479f0ba9c.png)
 
--третий запуск
-epsilon: 0.1
-![image](https://user-images.githubusercontent.com/101496751/204296952-60153e9a-c250-4d92-a0d0-abb4f3a8139c.png)
-![image](https://user-images.githubusercontent.com/101496751/204297183-a7f5833f-4d96-4ed2-95fb-be4f54054af0.png)
 
--четвертый запуск
+-третий запуск 2
 epsilon: 0.3
 ![image](https://user-images.githubusercontent.com/101496751/204298885-80ffacce-9331-45f4-b869-65bd1af76e16.png)
-![image](https://user-images.githubusercontent.com/101496751/204299191-c4de70fb-ebb3-46ec-a904-d9f5a15caad3.png)
+![image](https://user-images.githubusercontent.com/101496751/204301839-7cd35be5-9e50-4a30-bd78-5698c14a7d94.png)
 
+
+-четвертый запуск 3
+num_epoch: 7
+![image](https://user-images.githubusercontent.com/101496751/204301188-290962df-2593-41a7-a0b5-d2ce7ea4ad86.png)
+![image](https://user-images.githubusercontent.com/101496751/204301902-a7f603a2-2c3f-46ee-b9f7-a83ffd2dd620.png)
+
+
+-пятый запуск 4
+epsilon: 0.1
+![image](https://user-images.githubusercontent.com/101496751/204296952-60153e9a-c250-4d92-a0d0-abb4f3a8139c.png)
+![image](https://user-images.githubusercontent.com/101496751/204302058-abf4192d-9dbc-4bed-9ac7-97c1ab112ea8.png)
 
 
 
