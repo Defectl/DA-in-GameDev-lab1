@@ -231,56 +231,25 @@ public class Move : Agent
 ![image](https://user-images.githubusercontent.com/101496751/204245238-ac1938ad-45d9-4a8d-9ac6-2931ce61ff99.png)
 
 
- - Во втором запуске мы уменьшим диапозон скорости движения вдвое: 
-
-speedMove = Mathf.Clamp(actionBuffers.ContinuousActions[0], 1f, 5f);
-
-![image](https://user-images.githubusercontent.com/101496751/204246960-4d64e938-d808-4e5a-9497-4f974049020d.png)
-![image](https://user-images.githubusercontent.com/101496751/204247220-40a2fe34-174f-4ea4-8add-28194d91d59d.png)
-
-При уменьшении диапозона скорости график растет вверх
-
-- В третьем запуске мы вернем скорости начальные диапозоны, но увеличим диапозон времени добычи вдвое: 
-
-timeMining = Mathf.Clamp(actionBuffers.ContinuousActions[1], 1f, 20f);
-
-![image](https://user-images.githubusercontent.com/101496751/204249115-aa1302e3-679d-40e6-9562-f2cfa2f8c778.png)
-![image](https://user-images.githubusercontent.com/101496751/204249443-1366c027-cd5c-4515-88c1-212b5bc286e5.png)
-
-При увеличении времени добычи график немонотонный (он как падал, так и возрастал)
-
-- В четвертом запуске уменьшим диапозон стоимости кирки в пять раз: 
-
-pickaxeСost = Mathf.Clamp(actionBuffers.ContinuousActions[3], 100f, 200f);
-
-![image](https://user-images.githubusercontent.com/101496751/204251058-d60a6b02-d115-49a5-b949-a4a740d5402c.png)
-![image](https://user-images.githubusercontent.com/101496751/204251250-1c0edb65-77a7-40d0-9c8c-02e99815ecaf.png)
-
-- В пятом запуске увеличим диапозон количества золота в 1,5 раза: 
-
-amountGold = Mathf.Clamp(actionBuffers.ContinuousActions[2], 1f, 15f);
-![image](https://user-images.githubusercontent.com/101496751/204252863-1ebc0c2a-79e7-4c2e-9deb-e40161d8238e.png)
-![image](https://user-images.githubusercontent.com/101496751/204253020-f5c8db39-6389-438a-af1f-2d0a2e3c3316.png)
-
-- второй запуск 1
+- второй запуск 
 strength: 2.0
 ![image](https://user-images.githubusercontent.com/101496751/204290208-e0dc8b3d-20f6-4e1c-b43e-ff49d4586846.png)
 ![image](https://user-images.githubusercontent.com/101496751/204301788-03ea388f-bd32-41f3-937d-5a7479f0ba9c.png)
 
 
--третий запуск 2
+-третий запуск 
 epsilon: 0.3
 ![image](https://user-images.githubusercontent.com/101496751/204298885-80ffacce-9331-45f4-b869-65bd1af76e16.png)
 ![image](https://user-images.githubusercontent.com/101496751/204301839-7cd35be5-9e50-4a30-bd78-5698c14a7d94.png)
 
 
--четвертый запуск 3
+-четвертый запуск 
 num_epoch: 7
 ![image](https://user-images.githubusercontent.com/101496751/204301188-290962df-2593-41a7-a0b5-d2ce7ea4ad86.png)
 ![image](https://user-images.githubusercontent.com/101496751/204301902-a7f603a2-2c3f-46ee-b9f7-a83ffd2dd620.png)
 
 
--пятый запуск 4
+-пятый запуск 
 epsilon: 0.1
 ![image](https://user-images.githubusercontent.com/101496751/204296952-60153e9a-c250-4d92-a0d0-abb4f3a8139c.png)
 ![image](https://user-images.githubusercontent.com/101496751/204302058-abf4192d-9dbc-4bed-9ac7-97c1ab112ea8.png)
