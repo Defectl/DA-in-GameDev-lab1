@@ -272,6 +272,13 @@ epsilon: 0.1
 ![image](https://user-images.githubusercontent.com/101496751/204296952-60153e9a-c250-4d92-a0d0-abb4f3a8139c.png)
 ![image](https://user-images.githubusercontent.com/101496751/204297183-a7f5833f-4d96-4ed2-95fb-be4f54054af0.png)
 
+-четвертый запуск
+epsilon: 0.3
+![image](https://user-images.githubusercontent.com/101496751/204298885-80ffacce-9331-45f4-b869-65bd1af76e16.png)
+![image](https://user-images.githubusercontent.com/101496751/204299191-c4de70fb-ebb3-46ec-a904-d9f5a15caad3.png)
+
+
+
 
 
 
