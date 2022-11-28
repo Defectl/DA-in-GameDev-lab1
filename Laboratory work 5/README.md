@@ -55,6 +55,10 @@
 ![image](https://user-images.githubusercontent.com/101496751/204229135-48e72816-7545-49b3-afd8-8d6f8a951857.png)
 
 
+![image](https://user-images.githubusercontent.com/101496751/204229940-db7a5d4d-de37-49e4-bfe6-65e90a26548c.png)
+![image](https://user-images.githubusercontent.com/101496751/204230018-d4b7f987-e641-47c5-9a2f-1e8cbaa876a6.png)
+
+
 ## Задание 2
 ### Опишите результаты, выведенные в TensorBoard.
     
