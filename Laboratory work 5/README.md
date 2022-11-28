@@ -244,9 +244,10 @@ epsilon: 0.3
 
 
 -четвертый запуск 
-num_epoch: 7
-![image](https://user-images.githubusercontent.com/101496751/204301188-290962df-2593-41a7-a0b5-d2ce7ea4ad86.png)
-![image](https://user-images.githubusercontent.com/101496751/204301902-a7f603a2-2c3f-46ee-b9f7-a83ffd2dd620.png)
+learning_rate: 1.0e-4
+![image](https://user-images.githubusercontent.com/101496751/204308718-6594c2f0-3b01-4f35-80aa-a48767b9b499.png)
+![image](https://user-images.githubusercontent.com/101496751/204308868-51cc39d7-85b8-499a-89a5-6bf8aa986cde.png)
+
 
 
 -пятый запуск 
@@ -257,7 +258,7 @@ epsilon: 0.1
 
 все графики вместе: 
 
-![image](https://user-images.githubusercontent.com/101496751/204302852-caa2e9d2-981d-4d8a-8e9c-dbb7740df1a7.png)
+![image](https://user-images.githubusercontent.com/101496751/204309239-5020cdea-5bd1-4c49-9cd4-ba1a134c7b4d.png)
 
 
 
