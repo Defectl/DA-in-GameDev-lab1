@@ -222,12 +222,20 @@ public class Move : Agent
 
 - Обучим модель и с помощью графиков посомтрим на результат обучения:
 ![image](https://user-images.githubusercontent.com/101496751/204237070-1ca94a82-f23f-4ee6-9970-1ec7de61130c.png)
-![image](https://user-images.githubusercontent.com/101496751/204240055-4393f993-b434-4ddd-a0e6-4f200ffa1b09.png)
+![image](https://user-images.githubusercontent.com/101496751/204244449-8618f7df-5902-4059-8e0a-f1c68c46725b.png)
+
 
 Установим TensorBoard для оценки результатов обучения:
 ![image](https://user-images.githubusercontent.com/101496751/204229940-db7a5d4d-de37-49e4-bfe6-65e90a26548c.png)
 Вот такие результаты: 
-![image](https://user-images.githubusercontent.com/101496751/204240557-14238379-8681-49c7-b840-9565a3a9b65c.png)
+![image](https://user-images.githubusercontent.com/101496751/204245238-ac1938ad-45d9-4a8d-9ac6-2931ce61ff99.png)
+
+
+Во втором запуске мы уменьшим диапозон скорости движения вдвое: 
+
+speedMove = Mathf.Clamp(actionBuffers.ContinuousActions[0], 1f, 5f);
+
+
 
 
 
