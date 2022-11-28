@@ -286,6 +286,12 @@ epsilon: 0.1
 ![image](https://user-images.githubusercontent.com/101496751/204302058-abf4192d-9dbc-4bed-9ac7-97c1ab112ea8.png)
 
 
+все графики вместе: 
+
+![image](https://user-images.githubusercontent.com/101496751/204302852-caa2e9d2-981d-4d8a-8e9c-dbb7740df1a7.png)
+
+
+
 
 
 
