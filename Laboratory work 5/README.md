@@ -40,6 +40,21 @@
 ## Задание 1
 ### Измените параметры файла. yaml-агента и определить какие параметры и как влияют на обучение модели.
 
+Ход работы:
+
+- Нужно открыть проект в Unity, который представлен в методических указаниях, и ознакомиться с ним.
+- Следующим шагом нужно установить виртульное окружение и необходимые пакеты с помощью Anaconda Prompt.
+
+![image](https://user-images.githubusercontent.com/101496751/204228722-34969e3c-bf78-49ff-8744-6f085dc70b01.png)
+![image](https://user-images.githubusercontent.com/101496751/204228774-d3fbcc80-03c9-47e2-9be4-dc9fe7d1c7c6.png)
+![image](https://user-images.githubusercontent.com/101496751/204228879-5a948438-9e82-404a-b91c-a040be2d59c3.png)
+
+- Затем необходимо перейти в папку с проектом и начать обучение модели.
+
+![image](https://user-images.githubusercontent.com/101496751/204229075-417bcc73-b7d8-4af9-b7c0-726425775328.png)
+![image](https://user-images.githubusercontent.com/101496751/204229135-48e72816-7545-49b3-afd8-8d6f8a951857.png)
+
+
 ## Задание 2
 ### Опишите результаты, выведенные в TensorBoard.
     
