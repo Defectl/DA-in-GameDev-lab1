@@ -222,9 +222,12 @@ public class Move : Agent
 
 - Обучим модель и с помощью графиков посомтрим на результат обучения:
 ![image](https://user-images.githubusercontent.com/101496751/204237070-1ca94a82-f23f-4ee6-9970-1ec7de61130c.png)
-![image](https://user-images.githubusercontent.com/101496751/204238465-a9501ff2-3d1d-4da4-9a4c-3d0278ee712d.png)
+![image](https://user-images.githubusercontent.com/101496751/204240055-4393f993-b434-4ddd-a0e6-4f200ffa1b09.png)
 
+Установим TensorBoard для оценки результатов обучения:
 ![image](https://user-images.githubusercontent.com/101496751/204229940-db7a5d4d-de37-49e4-bfe6-65e90a26548c.png)
+Вот такие результаты: 
+![image](https://user-images.githubusercontent.com/101496751/204240557-14238379-8681-49c7-b840-9565a3a9b65c.png)
 
 
 
