@@ -235,6 +235,10 @@ public class Move : Agent
 
 speedMove = Mathf.Clamp(actionBuffers.ContinuousActions[0], 1f, 5f);
 
+![image](https://user-images.githubusercontent.com/101496751/204246960-4d64e938-d808-4e5a-9497-4f974049020d.png)
+![image](https://user-images.githubusercontent.com/101496751/204247220-40a2fe34-174f-4ea4-8add-28194d91d59d.png)
+
+
 
 
 
