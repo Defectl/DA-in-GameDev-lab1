@@ -249,6 +249,14 @@ timeMining = Mathf.Clamp(actionBuffers.ContinuousActions[1], 1f, 20f);
 
 При увеличении времени добычи график немонотонный (он как падал, так и возрастал)
 
+- В четвертом запуске уменьшим стоимость кирки: 
+
+pickaxeСost = Mathf.Clamp(actionBuffers.ContinuousActions[3], 100f, 200f);
+
+![image](https://user-images.githubusercontent.com/101496751/204251058-d60a6b02-d115-49a5-b949-a4a740d5402c.png)
+![image](https://user-images.githubusercontent.com/101496751/204251250-1c0edb65-77a7-40d0-9c8c-02e99815ecaf.png)
+
+
 
 
 
