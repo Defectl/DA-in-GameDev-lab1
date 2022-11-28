@@ -240,7 +240,7 @@ speedMove = Mathf.Clamp(actionBuffers.ContinuousActions[0], 1f, 5f);
 
 При уменьшении диапозона скорости график растет вверх
 
-- В третьем запуске мы вернем скорости начальные диапозоны, но увеличим время добычи вдвое: 
+- В третьем запуске мы вернем скорости начальные диапозоны, но увеличим диапозон времени добычи вдвое: 
 
 timeMining = Mathf.Clamp(actionBuffers.ContinuousActions[1], 1f, 20f);
 
@@ -249,12 +249,20 @@ timeMining = Mathf.Clamp(actionBuffers.ContinuousActions[1], 1f, 20f);
 
 При увеличении времени добычи график немонотонный (он как падал, так и возрастал)
 
-- В четвертом запуске уменьшим стоимость кирки: 
+- В четвертом запуске уменьшим диапозон стоимости кирки в пять раз: 
 
 pickaxeСost = Mathf.Clamp(actionBuffers.ContinuousActions[3], 100f, 200f);
 
 ![image](https://user-images.githubusercontent.com/101496751/204251058-d60a6b02-d115-49a5-b949-a4a740d5402c.png)
 ![image](https://user-images.githubusercontent.com/101496751/204251250-1c0edb65-77a7-40d0-9c8c-02e99815ecaf.png)
+
+- В пятом запуске увеличим диапозон количества золота в 1,5 раза: 
+
+amountGold = Mathf.Clamp(actionBuffers.ContinuousActions[2], 1f, 15f);
+![image](https://user-images.githubusercontent.com/101496751/204252863-1ebc0c2a-79e7-4c2e-9deb-e40161d8238e.png)
+![image](https://user-images.githubusercontent.com/101496751/204253020-f5c8db39-6389-438a-af1f-2d0a2e3c3316.png)
+
+
 
 
 
