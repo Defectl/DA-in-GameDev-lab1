@@ -262,6 +262,15 @@ amountGold = Mathf.Clamp(actionBuffers.ContinuousActions[2], 1f, 15f);
 ![image](https://user-images.githubusercontent.com/101496751/204252863-1ebc0c2a-79e7-4c2e-9deb-e40161d8238e.png)
 ![image](https://user-images.githubusercontent.com/101496751/204253020-f5c8db39-6389-438a-af1f-2d0a2e3c3316.png)
 
+- второй запуск 
+strength: 0.5
+![image](https://user-images.githubusercontent.com/101496751/204290208-e0dc8b3d-20f6-4e1c-b43e-ff49d4586846.png)
+![image](https://user-images.githubusercontent.com/101496751/204290544-a087d80c-620b-425b-9ac8-c2d44da40d39.png)
+
+-третий запуск
+
+
+
 
 
 
