@@ -68,7 +68,7 @@ pip install torch~=1.7.1 -f https://download.pytorch.org/whl/torch_stable.html
 
 - Затем необходимо перейти в папку с проектом и начать обучение модели.
 
-Изначально файл Move.cs выглядит вот так: 
+Файл Move.cs выглядит вот так: 
 
 ```py
 using System.Collections;
