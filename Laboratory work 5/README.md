@@ -220,21 +220,74 @@ public class Move : Agent
 }
 ```
 
-- Обучим модель и с помощью графиков посомтрим на результат обучения:
+- Обучим модель и с помощью графиков посмотрим на результат обучения:
+```py
+mlagents-learn Economic.yaml --run-id=Economic –-force
+```
+
 ![image](https://user-images.githubusercontent.com/101496751/204237070-1ca94a82-f23f-4ee6-9970-1ec7de61130c.png)
 ![image](https://user-images.githubusercontent.com/101496751/204244449-8618f7df-5902-4059-8e0a-f1c68c46725b.png)
 
 
 Установим TensorBoard для оценки результатов обучения:
+```py
+pip install tensorflow
+```
 ![image](https://user-images.githubusercontent.com/101496751/204229940-db7a5d4d-de37-49e4-bfe6-65e90a26548c.png)
-Вот такие результаты: 
+Вот такие результаты можно будет увидеть после выполнения команды, перейдя на локальный хост - http://localhost:6006/:
+```py
+tensorboard --logdir=results\Economic
+```
 ![image](https://user-images.githubusercontent.com/101496751/204245238-ac1938ad-45d9-4a8d-9ac6-2931ce61ff99.png)
 
+В первом запуске использовались следующие параметры в .yaml файле:
 
-- второй запуск 
+```py
+behaviors:
+  Economic:
+    trainer_type: ppo
+    hyperparameters:
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 1.0e-4
+      learning_rate_schedule: linear
+      beta: 1.0e-2
+      epsilon: 0.2
+      lambd: 0.95
+      num_epoch: 3      
+    network_settings:
+      normalize: false
+      hidden_units: 128
+      num_layers: 2
+    reward_signals:
+      extrinsic:
+        gamma: 0.99
+        strength: 1.0
+    checkpoint_interval: 500000
+    max_steps: 750000
+    time_horizon: 64
+    summary_freq: 5000
+    self_play:
+      save_steps: 20000
+      team_change: 100000
+      swap_steps: 10000
+      play_against_latest_model_ratio: 0.5
+      window: 10
+```
+
+В следующих запусках мы будем менять значение одного из параметров и смотреть, как он будет влиять на обучение модели.
+
+
+- При втором запуске будем менять праметр strength: увеличим его в двое. Это фактор, на который можно умножить вознаграждение, получаемое от окружающей среды. 
+
+```py
 strength: 2.0
+``` 
+
 ![image](https://user-images.githubusercontent.com/101496751/204290208-e0dc8b3d-20f6-4e1c-b43e-ff49d4586846.png)
 ![image](https://user-images.githubusercontent.com/101496751/204301788-03ea388f-bd32-41f3-937d-5a7479f0ba9c.png)
+
+Cumulative Reward всегда равно единице, а политика потерь - растет вверх.
 
 
 -третий запуск 
